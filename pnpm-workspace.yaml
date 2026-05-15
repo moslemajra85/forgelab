@@ -1,0 +1,4 @@
+# tells which folders belong to workspace
+packages:
+  - "apps/*"
+  - "packages/*"

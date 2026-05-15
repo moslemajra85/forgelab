@@ -1,0 +1,15 @@
+{
+  "name": "forgelab",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:web": "pnpm --filter @forgelab/web dev",
+    "dev:api": "pnpm --filter @forgelab/api dev",
+    "dev:worker": "pnpm --filter @forgelab/worker dev",
+    "dev": "pnpm -r --parallel --filter @forgelab/web --filter @forgelab/api --filter @forgelab/worker dev",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down",
+    "infra:logs": "docker compose logs -f",
+    "infra:ps": "docker compose ps"
+  }
+}

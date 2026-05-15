@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+
+# OS/editor noise
+.DS_Store
+.vscode/
+.idea/
+
+# Prisma or local artifacts if added later
+*.sqlite
