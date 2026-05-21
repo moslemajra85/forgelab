@@ -21,3 +21,4 @@ coverage/
 
 # Prisma or local artifacts if added later
 *.sqlite
+

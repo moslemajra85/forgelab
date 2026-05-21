@@ -8,7 +8,14 @@ const rootEnvPath = path.resolve(currentDirectory, "../../../../.env");
 
 config({ path: rootEnvPath });
 
-const requiredEnvironmentVariables = ["DATABASE_URL", "API_PORT"] as const;
+const requiredEnvironmentVariables = [
+  "DATABASE_URL",
+  "API_PORT",
+  "AUTH_ACCESS_TOKEN_SECRET",
+  "AUTH_ACCESS_TOKEN_EXPIRES_IN",
+  "AUTH_TOKEN_ISSUER",
+  "AUTH_TOKEN_AUDIENCE",
+] as const;
 
 for (const variableName of requiredEnvironmentVariables) {
   if (!process.env[variableName]) {
@@ -19,6 +26,11 @@ for (const variableName of requiredEnvironmentVariables) {
 export const env = {
   DATABASE_URL: process.env.DATABASE_URL as string,
   API_PORT: Number(process.env.API_PORT),
+  AUTH_ACCESS_TOKEN_SECRET: process.env.AUTH_ACCESS_TOKEN_SECRET as string,
+  AUTH_ACCESS_TOKEN_EXPIRES_IN: process.env
+    .AUTH_ACCESS_TOKEN_EXPIRES_IN as string,
+  AUTH_TOKEN_ISSUER: process.env.AUTH_TOKEN_ISSUER as string,
+  AUTH_TOKEN_AUDIENCE: process.env.AUTH_TOKEN_AUDIENCE as string,
 };
 
 if (Number.isNaN(env.API_PORT)) {
