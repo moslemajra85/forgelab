@@ -10,27 +10,30 @@ The long-term goal is simple: help a builder move from "I have an idea" to "I kn
 
 ## Table of Contents 📚
 
-- [What ForgeLab Does](#what-forgelab-does-)
-- [Core Product Vision](#core-product-vision-)
-- [Current Features](#current-features-)
-- [Tech Stack](#tech-stack-)
-- [Architecture Overview](#architecture-overview-)
-- [Repository Structure](#repository-structure-)
-- [Prerequisites](#prerequisites-)
-- [Download The Project](#download-the-project-)
-- [Installation](#installation-)
-- [Environment Variables](#environment-variables-)
-- [Database Setup](#database-setup-)
-- [Start Development](#start-development-)
-- [Useful Commands](#useful-commands-)
-- [API Overview](#api-overview-)
-- [Testing](#testing-)
-- [Development Workflow](#development-workflow-)
-- [GitHub Push Workflow](#github-push-workflow-)
-- [Current Limitations](#current-limitations-)
-- [Roadmap](#roadmap-)
+- [What ForgeLab Does](#what-forgelab-does)
+- [Core Product Vision](#core-product-vision)
+- [Current Features](#current-features)
+- [Tech Stack](#tech-stack)
+- [Architecture Overview](#architecture-overview)
+- [Repository Structure](#repository-structure)
+- [Prerequisites](#prerequisites)
+- [Download The Project](#download-the-project)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Database Setup](#database-setup)
+- [Start Development](#start-development)
+- [Useful Commands](#useful-commands)
+- [API Overview](#api-overview)
+- [Testing](#testing)
+- [Development Workflow](#development-workflow)
+- [GitHub Push Workflow](#github-push-workflow)
+- [Current Limitations](#current-limitations)
+- [Roadmap](#roadmap)
+- [Engineering Principles](#engineering-principles)
 
 ---
+
+<a id="what-forgelab-does"></a>
 
 ## What ForgeLab Does ✨
 
@@ -47,6 +50,8 @@ ForgeLab is designed to become a focused workspace where a developer can:
 The product is especially useful for solo builders and early-stage teams who need structure but do not want heavyweight project management.
 
 ---
+
+<a id="core-product-vision"></a>
 
 ## Core Product Vision 🧭
 
@@ -65,6 +70,8 @@ ForgeLab should help answer questions like:
 The goal is not to replace engineering judgment. The goal is to support it with better structure, memory, and workflow.
 
 ---
+
+<a id="current-features"></a>
 
 ## Current Features ✅
 
@@ -93,6 +100,8 @@ The project currently includes:
 
 ---
 
+<a id="tech-stack"></a>
+
 ## Tech Stack 🛠️
 
 | Area | Technology |
@@ -110,6 +119,8 @@ The project currently includes:
 | Worker runtime | Node.js, TypeScript, `tsx` |
 
 ---
+
+<a id="architecture-overview"></a>
 
 ## Architecture Overview 🏗️
 
@@ -138,6 +149,8 @@ flowchart LR
 - `Worker App` is currently a scaffold and will likely own async/background processing later.
 
 ---
+
+<a id="repository-structure"></a>
 
 ## Repository Structure 📁
 
@@ -176,6 +189,8 @@ apps/api/src/
 
 ---
 
+<a id="prerequisites"></a>
+
 ## Prerequisites 📦
 
 Install these before running the project:
@@ -198,6 +213,8 @@ git --version
 
 ---
 
+<a id="download-the-project"></a>
+
 ## Download The Project ⬇️
 
 Clone the repository:
@@ -214,9 +231,11 @@ git clone https://github.com/YOUR_USERNAME/forgelab.git
 cd forgelab
 ```
 
-If the repository is still local and has not been pushed to GitHub yet, create an empty GitHub repository first, then connect it using the workflow in [GitHub Push Workflow](#github-push-workflow-).
+If the repository is still local and has not been pushed to GitHub yet, create an empty GitHub repository first, then connect it using the workflow in [GitHub Push Workflow](#github-push-workflow).
 
 ---
+
+<a id="installation"></a>
 
 ## Installation ⚙️
 
@@ -235,6 +254,8 @@ cp .env.example .env
 Then review `.env` and change secrets before using the project for anything beyond local development.
 
 ---
+
+<a id="environment-variables"></a>
 
 ## Environment Variables 🔐
 
@@ -260,6 +281,8 @@ Current variables:
 For local development, `.env.example` provides working defaults. For production, the token secret must be long, private, and generated securely.
 
 ---
+
+<a id="database-setup"></a>
 
 ## Database Setup 🐘
 
@@ -300,6 +323,8 @@ pnpm infra:down
 ```
 
 ---
+
+<a id="start-development"></a>
 
 ## Start Development ▶️
 
@@ -348,6 +373,8 @@ The API port comes from `API_PORT` in `.env`.
 
 ---
 
+<a id="useful-commands"></a>
+
 ## Useful Commands 🧰
 
 Root commands:
@@ -392,6 +419,8 @@ pnpm --filter @forgelab/worker start
 
 ---
 
+<a id="api-overview"></a>
+
 ## API Overview 🔌
 
 Current API routes:
@@ -433,6 +462,8 @@ sequenceDiagram
 
 ---
 
+<a id="testing"></a>
+
 ## Testing 🧪
 
 Run API tests:
@@ -460,6 +491,8 @@ pnpm --filter @forgelab/api test
 
 ---
 
+<a id="development-workflow"></a>
+
 ## Development Workflow 🧑‍💻
 
 Recommended local workflow:
@@ -486,6 +519,8 @@ chore: update workspace dependencies
 Keep commits focused. A good commit should be easy to review and easy to revert if needed.
 
 ---
+
+<a id="github-push-workflow"></a>
 
 ## GitHub Push Workflow 🌍
 
@@ -527,6 +562,8 @@ git remote -v
 
 ---
 
+<a id="current-limitations"></a>
+
 ## Current Limitations ⚠️
 
 ForgeLab is still early. Important limitations:
@@ -542,6 +579,8 @@ ForgeLab is still early. Important limitations:
 These limitations are normal for the current stage, but they should be documented clearly so contributors understand what exists versus what is planned.
 
 ---
+
+<a id="roadmap"></a>
 
 ## Roadmap 🗺️
 
@@ -573,6 +612,8 @@ Longer-term product roadmap:
 - Dashboard views for blockers, milestones, and recent decisions.
 
 ---
+
+<a id="engineering-principles"></a>
 
 ## Engineering Principles 🧠
 
